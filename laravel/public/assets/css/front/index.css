@@ -1,3 +1,78 @@
 .section-title {
+  font-size: 60px;
+  padding: 100px 50px 30px 50px;
   text-align: center;
+}
+
+/*=============================
+#video
+=============================*/
+#viedo #bg-video {
+  width: 100%;
+}
+
+/*=============================
+#pick-up
+=============================*/
+
+.pick-up-images ul.multiple-item {
+  padding-left: 0;
+}
+
+.pick-up-images ul.multiple-item img {
+  width: 414px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  /* 1300px以下に適用されるCSS（タブレット用） */
+  .pick-up-images ul.multiple-item img {
+    width: 280px;
+  }
+}
+
+/*=============================
+#notice
+=============================*/
+
+#notice {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#notice .notice-articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#notice .notice-articles .item img {
+  width: 380px;
+}
+
+#notice .notice-articles .item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+#notice .notice-articles .item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#notice .notice-articles .container {
+  padding: 20px;
+}
+
+.notice-articles .item .container .title {
+  margin-bottom: 15px;
+}
+
+.notice-articles .item .container .text {
+  margin-bottom: 15px;
+}
+
+.notice-articles .item .container .date-time {
+  text-align: right;
+  margin-top: 100px;
 }
