@@ -3,15 +3,15 @@
     <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('assets/image/front/logo.svg') }}"></a>
     <div id="navi" class="">
       <ul class="nav-menu">
-        <li><a href="">picup</a></li>
-        <li><a href="">feature</a></li>
-        <li><a href="">contact</a></li>
+        <li><a href="#pickUp">picup</a></li>
+        <li><a href="#notice">feature</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
 
       <ul class="nav-sns">
-        <li><a href="">Twitter</a></li>
-        <li><a href="">facebook</a></li>
-        <li><a href="">instagram</a></li>
+        <li><a href="https://twitter.com/home?lang=ja">Twitter</a></li>
+        <li><a href="https://ja-jp.facebook.com/">facebook</a></li>
+        <li><a href="https://www.instagram.com/?hl=ja">instagram</a></li>
       </ul>
     </div>
 

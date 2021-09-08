@@ -27,6 +27,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <!-- header -->
   <script src="{{ asset('assets/js/front/components/header.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
   <!-- js -->
   @yield('js')
 </body>
