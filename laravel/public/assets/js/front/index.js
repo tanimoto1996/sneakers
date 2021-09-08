@@ -1,9 +1,5 @@
 $(function () {
-  // $('.multiple-item').slick({
-  //   draggable: true,
-  //   infinite: true,
-  //   swipe: true,
-  // });
+  // スムーススクロール
   $('.multiple-item').slick({
     centerMode: true,
     centerPadding: '60px',
@@ -29,4 +25,21 @@ $(function () {
       }
     ]
   });
+
+  // ページネーションAJAX
+  $(document).on('click', '.pagination a', function (e) {
+    e.preventDefault();
+
+    const page = $(this).attr('href').split('page=')[1];
+
+    getProducts(page);
+  });
+
+  function getProducts(page) {
+    $.ajax({
+      url: '/?page=' + page
+    }).done(function (data) {
+      $("#notice").html($('#notice', $(data)).html());
+    });
+  }
 });

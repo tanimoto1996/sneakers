@@ -31,64 +31,20 @@
 
 <section id="notice">
   <h2 class="section-title">NOTICE</h2>
+
   <div class="notice-articles">
+    @foreach($notices as $notice)
     <div class="item">
       <img src="{{ asset('assets/image/front/feature1.jpg') }}" alt="">
       <div class="container">
-        <div class="title">category</div>
-        <p class="text">テキストテキストテキストテキスト</p>
-        <div class="date-time">日付</div>
+        <div class="title">{!! nl2br(e(Str::limit($notice->title, 30))) !!}</div>
+        <p class="text">{!! nl2br(e(Str::limit($notice->body, 100))) !!}</p>
+        <div class="date-time">{{ $notice->published_at->format('Y年m月d日') }}</div>
       </div>
     </div>
-    <div class="item">
-      <img src="{{ asset('assets/image/front/feature2.jpg') }}" alt="">
-      <div class="container">
-        <div class="title">category</div>
-        <p class="text">テキストテキストテキストテキスト</p>
-        <div class="date-time">日付</div>
-      </div>
-    </div>
-    <div class="item">
-      <img src="{{ asset('assets/image/front/feature2.jpg') }}" alt="">
-      <div class="container">
-        <div class="title">category</div>
-        <p class="text">テキストテキストテキストテキスト</p>
-        <div class="date-time">日付</div>
-      </div>
-    </div>
-    <div class="item">
-      <img src="{{ asset('assets/image/front/feature2.jpg') }}" alt="">
-      <div class="container">
-        <div class="title">category</div>
-        <p class="text">テキストテキストテキストテキスト</p>
-        <div class="date-time">日付</div>
-      </div>
-    </div>
-    <div class="item">
-      <img src="{{ asset('assets/image/front/feature2.jpg') }}" alt="">
-      <div class="container">
-        <div class="title">category</div>
-        <p class="text">テキストテキストテキストテキスト</p>
-        <div class="date-time">日付</div>
-      </div>
-    </div>
-    <div class="item">
-      <img src="{{ asset('assets/image/front/feature2.jpg') }}" alt="">
-      <div class="container">
-        <div class="title">category</div>
-        <p class="text">テキストテキストテキストテキスト</p>
-        <div class="date-time">日付</div>
-      </div>
-    </div>
-    <div class="item">
-      <img src="{{ asset('assets/image/front/feature2.jpg') }}" alt="">
-      <div class="container">
-        <div class="title">category</div>
-        <p class="text">テキストテキストテキストテキスト</p>
-        <div class="date-time">日付</div>
-      </div>
-    </div>
+    @endforeach
   </div>
+  {{ $notices->links() }}
 </section>
 
 <section id="contact">

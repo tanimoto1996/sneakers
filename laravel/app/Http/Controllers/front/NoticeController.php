@@ -4,6 +4,7 @@ namespace App\Http\Controllers\front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Notice;
 
 class NoticeController extends Controller
 {
@@ -11,9 +12,10 @@ class NoticeController extends Controller
     public function index()
     {
         // モデルに取得の処理を書いて、メソッド呼び出し
+        $notices = Notice::publicList();
 
         // ビューを呼ぶ
-        return view('front.index');
+        return view('front.index', compact('notices'));
     }
 
     // 詳細表示

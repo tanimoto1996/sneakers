@@ -16,7 +16,6 @@ use App\Http\Controllers\front\NoticeController;
 
 Route::get('/', [NoticeController::class, 'index'])->name('home');
 
-
 Route::get('/admin', function () {
     echo 'back';
 });
