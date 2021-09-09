@@ -1,0 +1,86 @@
+/*=============================
+#contact
+=============================*/
+section#contact {
+  background: #121212;
+  color: #fff;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#contact .content {
+  display: flex;
+  max-width: 1240px;
+  padding: 0 16px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 800px) {
+  #contact .content {
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+}
+
+/* contact-info */
+#contact .contact-info {
+  width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+  #contact .contact-info {
+    width: 100%;
+  }
+}
+/* contact-form */
+#contact .contact-form {
+  width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+  #contact .contact-form {
+    width: 100%;
+  }
+}
+
+#contact .form-content {
+  margin-bottom: 20px;
+}
+
+#contact label {
+  display: block;
+}
+
+#contact .form-content input,
+#contact .form-content textarea {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form-button input {
+  display: inline-block;
+  border-radius: 5%; /* 角丸       */
+  font-size: 18pt; /* 文字サイズ */
+  text-align: center; /* 文字位置   */
+  cursor: pointer; /* カーソル   */
+  padding: 12px 44px; /* 余白       */
+  background: #1a1aff; /* 背景色     */
+  color: #ffffff; /* 文字色     */
+  line-height: 1em; /* 1行の高さ  */
+  transition: 0.3s; /* なめらか変化 */
+  border: 2px solid #1a1aff; /* 枠の指定 */
+}
+.form-button input:hover {
+  box-shadow: none; /* カーソル時の影消去 */
+  color: #1a1aff; /* 背景色     */
+  background: #ffffff; /* 文字色     */
+}
+
+/* footer */
+.footer-text {
+  padding: 20px 0;
+  text-align: center;
+}
