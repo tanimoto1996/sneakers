@@ -10,6 +10,8 @@
   <!-- header.css -->
   <link rel="stylesheet" href="{{ asset('assets/css/front/components/header.css') }}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+  <!-- footer.css -->
+  <link rel="stylesheet" href="{{ asset('assets/css/front/components/footer.css') }}">
 </head>
 
 <body>
@@ -21,6 +23,9 @@
     <main>
       @yield('content')
     </main>
+
+    <!-- footer -->
+    @include('front.components.footer')
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
