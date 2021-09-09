@@ -35,12 +35,14 @@
   <div class="notice-articles">
     @foreach($notices as $notice)
     <div class="item">
-      <img src="{{ asset('assets/image/front/feature1.jpg') }}" alt="">
-      <div class="container">
-        <div class="title">{!! nl2br(e(Str::limit($notice->title, 30))) !!}</div>
-        <p class="text">{!! nl2br(e(Str::limit($notice->body, 100))) !!}</p>
-        <div class="date-time">{{ $notice->published_at->format('Y年m月d日') }}</div>
-      </div>
+      <a href="{{ route('show', ['id' => $notice->id]) }}" style="color: black;">
+        <img src="{{ asset('assets/image/front/feature1.jpg') }}" alt="">
+        <div class="container">
+          <div class="title">{!! nl2br(e(Str::limit($notice->title, 30))) !!}</div>
+          <p class="text">{!! nl2br(e(Str::limit($notice->body, 100))) !!}</p>
+          <div class="date-time">{{ $notice->published_at->format('Y年m月d日') }}</div>
+        </div>
+      </a>
     </div>
     @endforeach
   </div>

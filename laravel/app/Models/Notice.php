@@ -39,6 +39,14 @@ class Notice extends Model
             ->paginate(6);
     }
 
+    // 詳細記事を取得
+    public function scopePublicFindId(Builder $query, int $id)
+    {
+        return $query
+            ->public()
+            ->findOrFail($id);
+    }
+
     // ユーザーと紐付け
     public function users()
     {

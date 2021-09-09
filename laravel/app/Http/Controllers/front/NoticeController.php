@@ -22,7 +22,9 @@ class NoticeController extends Controller
     public function show(int $id)
     {
         // IDで紐付けて, そいつだけ表示
+        $notice = Notice::publicFindId($id);
 
         // ビューを呼ぶ
+        return view('front.show', compact('notice'));
     }
 }
