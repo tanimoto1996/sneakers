@@ -1,0 +1,158 @@
+.section-title {
+  font-size: 60px;
+  padding: 100px 50px 30px 50px;
+  text-align: center;
+}
+
+/*=============================
+#video
+=============================*/
+#viedo #bg-video {
+  width: 100%;
+}
+
+/*=============================
+#pick-up
+=============================*/
+
+.pick-up-images ul.multiple-item {
+  padding-left: 0;
+}
+
+.pick-up-images ul.multiple-item img {
+  width: 414px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  /* 1300px以下に適用されるCSS（タブレット用） */
+  .pick-up-images ul.multiple-item img {
+    width: 280px;
+  }
+}
+
+/*=============================
+#notice
+=============================*/
+
+#notice {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#notice .notice-articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#notice .notice-articles .item img {
+  width: 380px;
+}
+
+#notice .notice-articles .item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  transition: 0.3s;
+  width: 380px;
+}
+
+#notice .notice-articles .item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#notice .notice-articles .container {
+  padding: 20px;
+}
+
+.notice-articles .item .container .title {
+  margin-bottom: 15px;
+}
+
+.notice-articles .item .container .text {
+  margin-bottom: 15px;
+}
+
+.notice-articles .item .container .date-time {
+  text-align: right;
+  margin-top: 100px;
+}
+
+/* ページネーション */
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/*=============================
+#contact
+=============================*/
+section#contact {
+  background: #121212;
+  color: #fff;
+  margin-top: 50px;
+}
+
+#contact .content {
+  display: flex;
+  max-width: 1240px;
+  padding: 0 16px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+/* contact-info */
+#contact .contact-info {
+  width: 45%;
+}
+
+/* contact-form */
+#contact .contact-form {
+  width: 45%;
+}
+
+#contact .form-content {
+  margin-bottom: 20px;
+}
+
+#contact label {
+  display: block;
+}
+
+#contact .form-content input,
+#contact .form-content textarea {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form-button input {
+  display: inline-block;
+  border-radius: 5%; /* 角丸       */
+  font-size: 18pt; /* 文字サイズ */
+  text-align: center; /* 文字位置   */
+  cursor: pointer; /* カーソル   */
+  padding: 12px 44px; /* 余白       */
+  background: #1a1aff; /* 背景色     */
+  color: #ffffff; /* 文字色     */
+  line-height: 1em; /* 1行の高さ  */
+  transition: 0.3s; /* なめらか変化 */
+  border: 2px solid #1a1aff; /* 枠の指定 */
+}
+.form-button input:hover {
+  box-shadow: none; /* カーソル時の影消去 */
+  color: #1a1aff; /* 背景色     */
+  background: #ffffff; /* 文字色     */
+}
+
+/* footer */
+.footer-text {
+  padding: 20px 0;
+  text-align: center;
+}
