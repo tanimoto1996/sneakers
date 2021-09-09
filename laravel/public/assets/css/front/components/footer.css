@@ -5,6 +5,7 @@ section#contact {
   background: #121212;
   color: #fff;
   margin-top: 50px;
+  text-align: center;
 }
 
 #contact .content {
@@ -15,14 +16,32 @@ section#contact {
   justify-content: space-evenly;
 }
 
+@media screen and (max-width: 800px) {
+  #contact .content {
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+}
+
 /* contact-info */
 #contact .contact-info {
   width: 45%;
 }
 
+@media screen and (max-width: 800px) {
+  #contact .contact-info {
+    width: 100%;
+  }
+}
 /* contact-form */
 #contact .contact-form {
   width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+  #contact .contact-form {
+    width: 100%;
+  }
 }
 
 #contact .form-content {
