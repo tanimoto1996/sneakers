@@ -40,7 +40,13 @@
         <div class="container">
           <div class="title">{!! nl2br(e(Str::limit($notice->title, 30))) !!}</div>
           <p class="text">{!! nl2br(e(Str::limit($notice->body, 100))) !!}</p>
-          <div class="date-time">{{ $notice->published_at->format('Y年m月d日') }}</div>
+          <div class="date-time">
+            @if($notice->published_at)
+            {{ $notice->published_at->format('Y年m月d日') }}
+            @else
+            公開日なし
+            @endif
+          </div>
         </div>
       </a>
     </div>
