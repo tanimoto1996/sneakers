@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 
 class Notice extends Model
 {
@@ -23,6 +24,12 @@ class Notice extends Model
         'is_public' => 'boolean',
         'published_at' => 'datetime',
     ];
+
+    // 公開・非公開の記事を取得
+    public function scopeAllNotice(Builder $query)
+    {
+        return $query->latest('published_at')->get();
+    }
 
     // 公開の記事のみ取得
     public function scopePublic(Builder $query)
@@ -51,5 +58,15 @@ class Notice extends Model
     public function users()
     {
         return $this->belongsTo(User::class);
+    }
+
+    // 保存時user_idをログインユーザーに設定
+    protected static function boot()
+    {
+        parent::boot();
+
+        self::saving(function ($post) {
+            $post->user_id = Auth::id();
+        });
     }
 }
