@@ -12,6 +12,11 @@
     <?php echo $count += 1 ?>{{ $notice->is_public = $notice->is_public ? '公開' : '非公開' }}
     <div>{{ $notice->title }}</div><br>
     <div>{{ $notice->body }}</div><br>
+    @if($notice->image)
+    <img src="{{asset('storage/images/' . $notice->image)}}" alt="画像がDBにあった場合表示">
+    @else
+    <img src="{{ asset('assets/image/front/feature1.jpg') }}" alt="なかった場合、固定の画像を表示">
+    @endif
     <a href="{{ route('back.edit', ['id' => $notice->id]) }}">編集</a><br>
     <form action="{{ route('back.destroy', ['id' => $notice->id]) }}" method="post">
       @csrf

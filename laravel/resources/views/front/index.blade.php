@@ -36,7 +36,11 @@
     @foreach($notices as $notice)
     <div class="item">
       <a href="{{ route('show', ['id' => $notice->id]) }}" style="color: black;">
-        <img src="{{ asset('assets/image/front/feature1.jpg') }}" alt="">
+        @if($notice->image)
+        <img src="{{asset('storage/images/' . $notice->image)}}" alt="画像がDBにあった場合表示">
+        @else
+        <img src="{{ asset('assets/image/front/feature1.jpg') }}" alt="なかった場合、固定の画像を表示">
+        @endif
         <div class="container">
           <div class="title">{!! nl2br(e(Str::limit($notice->title, 30))) !!}</div>
           <p class="text">{!! nl2br(e(Str::limit($notice->body, 100))) !!}</p>

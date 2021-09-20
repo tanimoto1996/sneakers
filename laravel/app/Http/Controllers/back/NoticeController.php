@@ -32,12 +32,15 @@ class NoticeController extends Controller
         // 公開・非公開をboolean型に変換
         $isPublic = $request->is_public === 'true';
 
+        // バリデーション済みデータの取得
+        $validated = $request->validated();
+
         $image = "";
 
         if ($request->hasFile('image')) {
             // 画像あり
-            $request->file('image')->store('/public/images');
-            $image = $request->file('image')->hashName();
+            $image = time() . $request->file('image')->getClientOriginalName();
+            $request->file('image')->storeAs('/public/images', $image);
         }
 
         $notice->create([
