@@ -26,7 +26,7 @@ class CreateNoticeRequest extends FormRequest
         return [
             'title' => 'required|max:100',
             'body' => 'required|max:200',
-            'image' => 'image|mimes:jpeg,png,jpg,gif',
+            'image' => 'file|image|mimes:jpeg,png,jpg,gif',
             'is_public' => 'required',
         ];
     }

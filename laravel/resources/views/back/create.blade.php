@@ -15,7 +15,7 @@
     <!-- Page Content -->
     <div class="container mt-5 p-lg-5 bg-light">
 
-      <form action="{{ route('back.store') }}" method="POST">
+      <form action="{{ route('back.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <!--タイトル-->
         <div class="form-row">
